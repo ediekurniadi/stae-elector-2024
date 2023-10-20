@@ -1,0 +1,10 @@
+2023/10/20
+- mkdir server -> cd server -> npm init
+- npm i bcryptjs cookies-parser cors dotenv express ioredis jsonwebtoken ts-node-dev  --> (package.json)
+- npm i @types/bcryptjs @types/cookie-parser @types/cors @types/express @types/jsonwebtoken @types/node typescript     
+
+- create file app.ts, server.ts, .env
+- add package.json {"dev":"ts-node-dev --respawn --transpile-only server.ts "}
+- npm install typescript@latest -g
+- npx tsc --init -->>  (tsconfig.json)
+- npm run dev 
