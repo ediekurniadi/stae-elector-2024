@@ -2,9 +2,16 @@
 - mkdir server -> cd server -> npm init
 - npm i bcryptjs cookies-parser cors dotenv express ioredis jsonwebtoken ts-node-dev  --> (package.json)
 - npm i @types/bcryptjs @types/cookie-parser @types/cors @types/express @types/jsonwebtoken @types/node typescript     
+- npm i oracldb
 
-- create file app.ts, server.ts, .env
+- create file -->> \server\ [app.ts, server.ts, .env]
 - add package.json {"dev":"ts-node-dev --respawn --transpile-only server.ts "}
 - npm install typescript@latest -g
-- npx tsc --init -->>  (tsconfig.json)
+- npx tsc --init -->>  [tsconfig.json]
+
+### testing
 - npm run dev 
+
+- create file connection database n manage error -->> \server\util\ [db.ts, ErrorHandler.ts]
+
+
