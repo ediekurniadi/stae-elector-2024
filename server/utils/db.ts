@@ -8,15 +8,17 @@ const dbConfig = {
   connectString: process.env.DB_STRING,
 };
 
-async function connectToDatabase() {
-  try {
-    const connection = await oracledb.getConnection(dbConfig);
-    oracledb.outformat = OUT_FORMAT_OBJECT;
-    return connection;
-  } catch (error) {
-    console.log("Error connecting to the Oracle database", error);
-    process.exit(1);
-  }
+function connectDB() {
+  return new Promise((resolve, reject) => {
+    oracledb.outFormat = OUT_FORMAT_OBJECT;
+    oracledb.getConnection(dbConfig, (err, connection) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(connection);
+      }
+    });
+  });
 }
 
-module.exports = { connectToDatabase };
+export default connectDB;

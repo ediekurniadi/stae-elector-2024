@@ -1,8 +1,13 @@
+2023/10/22
+- create jwt, sendemail, token
+- registerUser, activationUser
+- dbutil.model.tes -->> utility untuk database
+
 2023/10/20
 - mkdir server -> cd server -> npm init
 - npm i bcryptjs cookies-parser cors dotenv express ioredis jsonwebtoken ts-node-dev  --> (package.json)
 - npm i @types/bcryptjs @types/cookie-parser @types/cors @types/express @types/jsonwebtoken @types/node typescript     
-- npm i oracldb
+- npm i oracldb ejs nodemailer @types/oracledb @types/ejs @types/nodemailer
 
 - create file -->> \server\ [app.ts, server.ts, .env]
 - add package.json {"dev":"ts-node-dev --respawn --transpile-only server.ts "}
@@ -13,5 +18,8 @@
 - npm run dev 
 
 - create file connection database n manage error -->> \server\util\ [db.ts, ErrorHandler.ts]
+- manage error --> \server\middleware\ [error.ts, catchAsyncError.ts]
 
-
+2023/10/21
+- seting redis --> upstash.com
+- seting nodemailer in google account
